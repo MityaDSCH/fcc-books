@@ -1,5 +1,11 @@
 module.exports = {
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['eslint']
+      }
+    ],
     loaders: [
       {
         test: /\.scss$/,
@@ -23,6 +29,9 @@ module.exports = {
         }
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc.json'
   },
   entry: {
     javascript: './src/client/index.jsx',
