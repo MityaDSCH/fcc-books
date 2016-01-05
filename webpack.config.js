@@ -2,6 +2,14 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
+      {
+        test: /\.html$/,
+        loader: 'file?name=[name].[ext]'
+      },
+      {
         test: /(\.jsx|\.js)$/,
         exclude: /node_modules/,
         loaders: ["react-hot", "babel-loader"],
@@ -13,10 +21,6 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      },
-      {
-        test: /\.html$/,
-        loader: 'file?name=[name].[ext]'
       }
     ]
   },

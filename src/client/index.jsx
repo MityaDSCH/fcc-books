@@ -3,10 +3,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './index.scss';
+
+import Navbar from './components/navbar/navbar.jsx';
+
 class App extends React.Component {
   render() {
     return (
-      <h1>Hello World!</h1>
+      <div>
+        <Navbar />
+        <h1>Hello World!</h1>
+      </div>
     );
   }
 }
